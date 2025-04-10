@@ -25,11 +25,32 @@ export default function App() {
     <div className="grid min-h-screen place-items-center px-4 py-16">
       <div className="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-24">
         <div className="flex max-w-md flex-col items-center text-center xl:order-2 xl:items-start xl:text-left">
-          <EpicStackLogo className="size-20" />
-          <h1 className="mt-6 text-4xl font-medium sm:text-4.5xl md:mt-8 md:text-5xl lg:text-5.5xl">
+          <EpicStackLogo
+            className={clsx(
+              "size-20",
+              // Animation
+              "animate-slide-top",
+              "xl:animate-slide-left xl:[animation-delay:0.5s]",
+            )}
+          />
+          <h1
+            className={clsx(
+              "mt-6 text-4xl font-medium sm:text-4.5xl md:mt-8 md:text-5xl lg:text-5.5xl",
+              // Animation
+              "animate-slide-top [animation-delay:0.3s]",
+              "xl:animate-slide-left xl:[animation-delay:0.8s]",
+            )}
+          >
             The <span className="text-highlight">Epic</span> Stack
           </h1>
-          <p className="mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl">
+          <p
+            className={clsx(
+              "mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl",
+              // Animation
+              "animate-slide-top [animation-delay:0.8s]",
+              "xl:animate-slide-left xl:[animation-delay:1.3s]",
+            )}
+          >
             Check the{" "}
             <a
               className="text-black underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-highlight"
@@ -41,10 +62,16 @@ export default function App() {
           </p>
         </div>
         <ul className="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6">
-          {logos.map((logo) => (
+          {logos.map((logo, i) => (
             <li
               key={logo.href}
-              className={clsx(columnClasses[logo.column], rowClasses[logo.row])}
+              style={{ "--loop-index": i } as React.CSSProperties}
+              className={clsx(
+                columnClasses[logo.column],
+                rowClasses[logo.row],
+                "animate-fade-in motion-safe:animate-roll-reveal",
+                "motion-safe:[animation-delay:calc(0.07s*var(--loop-index))]",
+              )}
             >
               <a
                 href={logo.href}
