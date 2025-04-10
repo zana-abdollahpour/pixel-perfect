@@ -31,7 +31,10 @@ export default function App() {
           </h1>
           <p className="mt-4 text-slate-600 sm:text-lg md:mt-6 md:text-xl">
             Check the{" "}
-            <a className="text-black underline" href="#">
+            <a
+              className="text-black underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-highlight"
+              href="#"
+            >
               Getting Started
             </a>{" "}
             guide file for how to get your project off the ground!
@@ -45,7 +48,7 @@ export default function App() {
             >
               <a
                 href={logo.href}
-                className="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 sm:size-24"
+                className="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 transition hover:-rotate-6 hover:bg-highlight/10 focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 sm:size-24"
               >
                 <img src={logo.src} alt={logo.alt} />
               </a>
