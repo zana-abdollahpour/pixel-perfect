@@ -40,7 +40,7 @@ export default function App() {
           />
           <h1
             className={clsx(
-              "mt-6 text-4xl font-medium sm:text-4.5xl md:mt-8 md:text-5xl lg:text-5.5xl xl:mt-0",
+              "sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl xl:mt-0",
               // Animation
               "animate-slide-top [animation-delay:0.3s]",
               "xl:animate-slide-left xl:[animation-delay:0.8s]",
@@ -59,7 +59,7 @@ export default function App() {
           >
             Check the{" "}
             <a
-              className="text-black underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-highlight"
+              className="focus:ring-highlight text-black underline hover:no-underline focus:ring-2 focus:outline-hidden"
               href="#"
             >
               Getting Started
@@ -81,7 +81,7 @@ export default function App() {
             >
               <a
                 href={logo.href}
-                className="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 transition hover:-rotate-6 hover:bg-highlight/10 focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 sm:size-24"
+                className="bg-highlight/[7%] hover:bg-highlight/10 focus:ring-highlight grid size-20 place-items-center rounded-2xl p-4 transition hover:-rotate-6 focus:ring-2 focus:ring-offset-2 focus:outline-hidden sm:size-24"
               >
                 <img src={logo.src} alt={logo.alt} />
               </a>
