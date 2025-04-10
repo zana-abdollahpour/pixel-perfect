@@ -1,4 +1,4 @@
-import { EpicStackLogo, logos } from "@/logos/logos";
+import { EpicStackLogo, logos } from "@/assets/logos";
 
 const columnClasses: Record<(typeof logos)[number]["column"], string> = {
   1: "xl:col-start-1",

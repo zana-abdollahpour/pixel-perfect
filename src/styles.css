@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "open-props/easings";
+
+@theme {
+  --breakpoint-sm: 520px;
+  --breakpoint-lg: 976px;
+
+  --color-highlight: #6202ff;
+
+  --font-poppins: Poppins, sans-serif;
+
+  --text-4_5xl: 2.625rem, 1.15;
+  --text-5_5xl: 3.375rem, 1;
+
+  --animate-fade-in: 0.4s fade-in ease-out backwards;
+  --animate-slide-top: 0.3s slide-top ease-out backwards;
+  --animate-slide-left: 0.3s slide-left ease-out backwards;
+  --animate-roll-reveal: 0.4s roll-reveal var(--ease-spring-2) backwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-left {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-top {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-reveal {
+    from {
+      transform: rotate(12deg) scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+}
